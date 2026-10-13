@@ -32,7 +32,7 @@ Open `http://localhost:5173`. The demo UI works without credentials. To run the 
 
 ## Deployment
 
-For Vercel, set root directory to `client`, build command `npm run build`, output `dist`, and `VITE_API_BASE_URL` to the deployed Render API. For Render, create a Web Service rooted at `server`, start with `npm start`, set `PORT`, `FRONTEND_URL`, and backend-only Supabase variables, and use `/api/health` as the health check.
+For Vercel, set root directory to `client`, build command `npm run build`, output `dist`, and configure the `VITE_*` variables from [`client/.env.production.example`](client/.env.production.example). The included `client/vercel.json` enables SPA rewrites for React Router. Set `VITE_API_BASE_URL` to the deployed Render API ending in `/api`. For Render, create a Web Service rooted at `server`, start with `npm start`, set `PORT`, `FRONTEND_URL`, and backend-only Supabase variables, and use `/api/health` as the health check. See [`docs/VERCEL.md`](docs/VERCEL.md) for the complete checklist.
 
 ## Verification status
 
