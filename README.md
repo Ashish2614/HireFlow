@@ -34,6 +34,8 @@ Open `http://localhost:5173`. The demo UI works without credentials. To run the 
 
 For Vercel, set root directory to `client`, build command `npm run build`, output `dist`, and configure the `VITE_*` variables from [`client/.env.production.example`](client/.env.production.example). The included `client/vercel.json` enables SPA rewrites for React Router. Set `VITE_API_BASE_URL` to the deployed Render API ending in `/api`. For Render, create a Web Service rooted at `server`, start with `npm start`, set `PORT`, `FRONTEND_URL`, and backend-only Supabase variables, and use `/api/health` as the health check. See [`docs/VERCEL.md`](docs/VERCEL.md) for the complete checklist.
 
+For a credential-free demo, the backend can run on Render without Supabase. Use [`docs/RENDER-NO-SUPABASE.md`](docs/RENDER-NO-SUPABASE.md). This mode uses in-memory demo data and is not suitable for real candidate information or durable production workflows.
+
 ## Verification status
 
 The local demo surface and frontend production build are intended to be verified with the commands above. Supabase Auth, RLS, private resume storage, recruiter invitations, transactional persistence, and role-isolation tests remain external setup work until a Supabase project is configured. Do not treat demo metrics as production recruitment data.
