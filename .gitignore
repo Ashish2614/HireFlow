@@ -4,5 +4,6 @@ dist/
 .env.*
 !.env.example
 !.env.production.example
+!.env.render.example
 coverage/
 *.log
